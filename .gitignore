@@ -1,0 +1,51 @@
+# ---- Secrets and credentials (never commit) ----
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials.*
+
+# ---- Local database files and dumps (may contain real data) ----
+*.sql.bak
+*.dump
+*.sqlite
+*.sqlite3
+*.db
+mysql-data/
+dbmsdata/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# ---- Logs and temporary files ----
+*.log
+*.tmp
+*.swp
+*~
+
+# ---- Editors and OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Node (screenshot/report tooling) ----
+node_modules/

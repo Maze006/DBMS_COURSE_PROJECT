@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1010" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="crow1" markerWidth="14" markerHeight="14" refX="12" refY="6" orient="auto">
+      <path d="M2,2 L12,6 L2,10" fill="none" stroke="#334155" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1500" height="1010" fill="#ffffff"/>
+  <text x="20" y="28" font-size="20" font-weight="700" fill="#0f172a">ER Diagram — Software License &amp; Subscription Management System</text>
+
+  <!-- ============ ENTITY BOX TEMPLATE (drawn manually per box) ============ -->
+
+  <!-- Row 1 -->
+  <!-- Vendor -->
+  <g>
+    <rect x="60" y="60" width="260" height="150" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+    <rect x="60" y="60" width="260" height="28" rx="6" fill="#1d4ed8"/>
+    <text x="190" y="79" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Vendor</text>
+    <text x="72" y="106" font-size="12" fill="#0f172a">vendor_id (PK)</text>
+    <text x="72" y="124" font-size="12" fill="#334155">name</text>
+    <text x="72" y="142" font-size="12" fill="#334155">contact_email</text>
+    <text x="72" y="160" font-size="12" fill="#334155">phone, address</text>
+  </g>
+
+  <!-- SoftwareProduct -->
+  <g>
+    <rect x="400" y="60" width="260" height="150" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+    <rect x="400" y="60" width="260" height="28" rx="6" fill="#1d4ed8"/>
+    <text x="530" y="79" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">SoftwareProduct</text>
+    <text x="412" y="106" font-size="12" fill="#0f172a">product_id (PK)</text>
+    <text x="412" y="124" font-size="12" fill="#b91c1c">vendor_id (FK)</text>
+    <text x="412" y="142" font-size="12" fill="#334155">name</text>
+    <text x="412" y="160" font-size="12" fill="#334155">category, description</text>
+  </g>
+
+  <!-- LicenseType -->
+  <g>
+    <rect x="740" y="60" width="260" height="150" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+    <rect x="740" y="60" width="260" height="28" rx="6" fill="#1d4ed8"/>
+    <text x="870" y="79" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">LicenseType</text>
+    <text x="752" y="106" font-size="12" fill="#0f172a">license_type_id (PK)</text>
+    <text x="752" y="124" font-size="12" fill="#b91c1c">product_id (FK)</text>
+    <text x="752" y="142" font-size="12" fill="#334155">name (Perpetual/Sub/Concurrent)</text>
+    <text x="752" y="160" font-size="12" fill="#334155">seats_per_license, pricing_model</text>
+  </g>
+
+  <!-- Purchase -->
+  <g>
+    <rect x="1080" y="60" width="260" height="150" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+    <rect x="1080" y="60" width="260" height="28" rx="6" fill="#1d4ed8"/>
+    <text x="1210" y="79" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Purchase</text>
+    <text x="1092" y="106" font-size="12" fill="#0f172a">purchase_id (PK)</text>
+    <text x="1092" y="124" font-size="12" fill="#b91c1c">license_type_id (FK)</text>
+    <text x="1092" y="142" font-size="12" fill="#334155">quantity, unit_cost</text>
+    <text x="1092" y="160" font-size="12" fill="#334155">purchase_date, order_reference</text>
+  </g>
+
+  <!-- Row 2 -->
+  <!-- ComplianceCheck -->
+  <g>
+    <rect x="60" y="320" width="260" height="150" rx="6" fill="#f0fdf4" stroke="#15803d" stroke-width="1.5"/>
+    <rect x="60" y="320" width="260" height="28" rx="6" fill="#15803d"/>
+    <text x="190" y="339" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">ComplianceCheck</text>
+    <text x="72" y="366" font-size="12" fill="#0f172a">check_id (PK)</text>
+    <text x="72" y="384" font-size="12" fill="#b91c1c">license_id (FK)</text>
+    <text x="72" y="402" font-size="12" fill="#334155">check_date, check_type</text>
+    <text x="72" y="420" font-size="12" fill="#334155">result (Pass/Fail), details</text>
+  </g>
+
+  <!-- Renewal -->
+  <g>
+    <rect x="400" y="320" width="260" height="150" rx="6" fill="#f0fdf4" stroke="#15803d" stroke-width="1.5"/>
+    <rect x="400" y="320" width="260" height="28" rx="6" fill="#15803d"/>
+    <text x="530" y="339" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Renewal</text>
+    <text x="412" y="366" font-size="12" fill="#0f172a">renewal_id (PK)</text>
+    <text x="412" y="384" font-size="12" fill="#b91c1c">license_id (FK)</text>
+    <text x="412" y="402" font-size="12" fill="#334155">renewal_date, previous/new_end_date</text>
+    <text x="412" y="420" font-size="12" fill="#334155">renewal_cost (&gt; 0), renewed_by (FK)</text>
+  </g>
+
+  <!-- Subscription -->
+  <g>
+    <rect x="740" y="320" width="260" height="150" rx="6" fill="#f0fdf4" stroke="#15803d" stroke-width="1.5"/>
+    <rect x="740" y="320" width="260" height="28" rx="6" fill="#15803d"/>
+    <text x="870" y="339" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Subscription</text>
+    <text x="752" y="366" font-size="12" fill="#0f172a">subscription_id (PK)</text>
+    <text x="752" y="384" font-size="12" fill="#b91c1c">license_id (FK)</text>
+    <text x="752" y="402" font-size="12" fill="#334155">billing_cycle, auto_renew</text>
+    <text x="752" y="420" font-size="12" fill="#334155">cost_per_cycle</text>
+  </g>
+
+  <!-- License -->
+  <g>
+    <rect x="1080" y="320" width="260" height="150" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+    <rect x="1080" y="320" width="260" height="28" rx="6" fill="#1d4ed8"/>
+    <text x="1210" y="339" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">License</text>
+    <text x="1092" y="366" font-size="12" fill="#0f172a">license_id (PK)</text>
+    <text x="1092" y="384" font-size="12" fill="#b91c1c">purchase_id (FK)</text>
+    <text x="1092" y="402" font-size="12" fill="#334155">license_key (UQ), quantity</text>
+    <text x="1092" y="420" font-size="12" fill="#334155">start_date, end_date, status</text>
+  </g>
+
+  <!-- Row 3 -->
+  <!-- Department -->
+  <g>
+    <rect x="60" y="580" width="260" height="150" rx="6" fill="#fff7ed" stroke="#c2410c" stroke-width="1.5"/>
+    <rect x="60" y="580" width="260" height="28" rx="6" fill="#c2410c"/>
+    <text x="190" y="599" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Department</text>
+    <text x="72" y="626" font-size="12" fill="#0f172a">department_id (PK)</text>
+    <text x="72" y="644" font-size="12" fill="#334155">name</text>
+    <text x="72" y="662" font-size="12" fill="#334155">cost_center_code</text>
+  </g>
+
+  <!-- AppUser -->
+  <g>
+    <rect x="400" y="580" width="260" height="150" rx="6" fill="#fff7ed" stroke="#c2410c" stroke-width="1.5"/>
+    <rect x="400" y="580" width="260" height="28" rx="6" fill="#c2410c"/>
+    <text x="530" y="599" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">AppUser</text>
+    <text x="412" y="626" font-size="12" fill="#0f172a">user_id (PK)</text>
+    <text x="412" y="644" font-size="12" fill="#b91c1c">department_id (FK)</text>
+    <text x="412" y="662" font-size="12" fill="#334155">name, email (UQ), role</text>
+  </g>
+
+  <!-- Device -->
+  <g>
+    <rect x="740" y="580" width="260" height="150" rx="6" fill="#fff7ed" stroke="#c2410c" stroke-width="1.5"/>
+    <rect x="740" y="580" width="260" height="28" rx="6" fill="#c2410c"/>
+    <text x="870" y="599" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Device</text>
+    <text x="752" y="626" font-size="12" fill="#0f172a">device_id (PK)</text>
+    <text x="752" y="644" font-size="12" fill="#b91c1c">department_id (FK)</text>
+    <text x="752" y="662" font-size="12" fill="#334155">asset_tag (UQ), device_type, hostname</text>
+  </g>
+
+  <!-- Allocation -->
+  <g>
+    <rect x="1080" y="580" width="260" height="150" rx="6" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.5"/>
+    <rect x="1080" y="580" width="260" height="28" rx="6" fill="#6d28d9"/>
+    <text x="1210" y="599" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Allocation</text>
+    <text x="1092" y="626" font-size="12" fill="#0f172a">allocation_id (PK)</text>
+    <text x="1092" y="644" font-size="12" fill="#b91c1c">license_id, user_id, device_id,</text>
+    <text x="1092" y="660" font-size="12" fill="#b91c1c">department_id (FK)</text>
+    <text x="1092" y="678" font-size="12" fill="#334155">allocated_date, expiry_date, status</text>
+  </g>
+
+  <!-- ============ RELATIONSHIP LINES (parent 1 -> child N) ============ -->
+  <g stroke="#334155" stroke-width="1.5" fill="none" marker-end="url(#crow1)">
+    <line x1="320" y1="135" x2="400" y2="135"/>
+    <line x1="660" y1="135" x2="740" y2="135"/>
+    <line x1="1000" y1="135" x2="1080" y2="135"/>
+    <line x1="1210" y1="210" x2="1210" y2="320"/>
+    <line x1="1080" y1="395" x2="1000" y2="395"/>
+    <path d="M1120,470 C 1120,530 530,530 530,470"/>
+    <path d="M1170,470 C 1170,560 190,560 190,470"/>
+    <line x1="1210" y1="470" x2="1210" y2="580"/>
+    <line x1="320" y1="655" x2="400" y2="655"/>
+    <line x1="1000" y1="655" x2="1080" y2="655"/>
+    <path d="M150,730 C 150,800 870,800 870,730"/>
+    <path d="M560,730 C 560,830 1150,830 1150,730"/>
+    <path d="M230,730 C 230,880 1210,880 1210,730"/>
+  </g>
+
+  <!-- Cardinality labels: 1 at the parent end, N (or 0..1) at the child end -->
+  <g font-size="12" fill="#0f172a" font-weight="700">
+    <text x="326" y="128">1</text><text x="384" y="128">N</text>
+    <text x="666" y="128">1</text><text x="724" y="128">N</text>
+    <text x="1006" y="128">1</text><text x="1064" y="128">N</text>
+    <text x="1218" y="232">1</text><text x="1218" y="312">1</text>
+    <text x="1062" y="388">1</text><text x="1004" y="388">0..1</text>
+    <text x="1128" y="490">1</text><text x="538" y="490">N</text>
+    <text x="1178" y="490">1</text><text x="198" y="490">N</text>
+    <text x="1218" y="496">1</text><text x="1218" y="572">N</text>
+    <text x="326" y="648">1</text><text x="384" y="648">N</text>
+    <text x="1006" y="648">1</text><text x="1064" y="648">N</text>
+    <text x="158" y="750">1</text><text x="858" y="750">N</text>
+    <text x="568" y="750">1</text><text x="1138" y="750">N</text>
+    <text x="238" y="750">1</text><text x="1198" y="750">N</text>
+  </g>
+  <g font-size="12" fill="#475569">
+    <text x="470" y="800">Department - Device</text>
+    <text x="800" y="826">AppUser - Allocation</text>
+    <text x="640" y="866">Department - Allocation</text>
+    <text x="700" y="503">License - Renewal</text>
+    <text x="600" y="560">License - ComplianceCheck</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(0,60)" font-size="12" fill="#334155">
+    <rect x="1080" y="850" width="14" height="14" fill="#eff6ff" stroke="#1d4ed8"/>
+    <text x="1100" y="861">Catalog / commercial entity</text>
+    <rect x="1080" y="872" width="14" height="14" fill="#f0fdf4" stroke="#15803d"/>
+    <text x="1100" y="883">License lifecycle entity</text>
+    <rect x="1080" y="894" width="14" height="14" fill="#fff7ed" stroke="#c2410c"/>
+    <text x="1100" y="905">Organization entity</text>
+    <rect x="1080" y="916" width="14" height="14" fill="#f5f3ff" stroke="#6d28d9"/>
+    <text x="1100" y="927">Bridge / assignment entity</text>
+    <text x="60" y="905" fill="#b91c1c">Red text = foreign key</text>
+    <text x="60" y="925">The vendor of a purchase is reached via Purchase, LicenseType, SoftwareProduct, Vendor (3NF). Renewal.renewed_by also references AppUser (not drawn).</text>
+  </g>
+</svg>
