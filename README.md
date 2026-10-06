@@ -87,8 +87,9 @@ MySQL 8.0 (tables, constraints, triggers, views, stored procedures) · Python 3 
 
 | Name | Roll number |
 |---|---|
-| Shreyash Singh | [Roll number] |
-| [Member 2 name] | [Roll number] |
-| [Member 3 name] | [Roll number] |
+| Shreyash Singh | 25WU0101130 |
+| Shivam Singh | 25WU0101129 |
+| Sambhaji Dungahu | 25WU0101120 |
+| Rama Sudeshna | 25WU0101104 |
 
-Faculty: [Faculty Name]
+Faculty: Dr. Kiran Mayee Adavala
