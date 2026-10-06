@@ -13,9 +13,9 @@ HOW TO USE THIS FILE
 
 &nbsp;
 
-**[Institute / University Name]**
+**WOXSEN UNIVERSITY**
 
-**[Department of Computer Science and Engineering]**
+**SOT**
 
 &nbsp;
 
@@ -27,7 +27,7 @@ HOW TO USE THIS FILE
 
 **Course:** Database Management Systems (DBMS) – Semester 3
 
-**Faculty:** [Faculty Name]
+**Faculty:** DR KIRAN MAYEE 
 
 **Academic year:** 2026–27
 
@@ -37,10 +37,10 @@ HOW TO USE THIS FILE
 
 | S. No. | Name | Roll number |
 |---|---|---|
-| 1 | Shreyash Singh | [Roll number] |
-| 2 | [Member 2 name] | [Roll number] |
-| 3 | [Member 3 name] | [Roll number] |
-
+| 1 | Shreyash | 25WU0101130 |
+| 2 | SHIVAM | 25WU0101129 |
+| 3 | SAMBHAJI | 25WU0101120 |
+| 4 | RAMA SUDESHNA | 25WU0101104|
 &nbsp;
 
 ---
@@ -1945,21 +1945,8 @@ The project delivers a complete license and subscription management system: a no
 9. Three.js authors, *Three.js Documentation*, https://threejs.org/docs/
 10. Course lecture notes and laboratory manual, Database Management Systems, [Institute name].
 
----
 
-# 16. Contribution of Each Member
-
-*(Fill in before submission. Suggested work areas are listed so the table can be completed accurately.)*
-
-| Member | Roll number | Contribution |
-|---|---|---|
-| Shreyash Singh | [Roll number] | [e.g. database design and DDL, triggers and procedures, application and user interface, testing, report] |
-| [Member 2 name] | [Roll number] | [e.g. requirements, ER diagram, normalization, data dictionary, sample data] |
-| [Member 3 name] | [Roll number] | [e.g. queries and views, test cases, screenshots, documentation] |
-
----
-
-# 17. Appendix
+# 16. Appendix
 
 ## Appendix A: GitHub repository link
 

@@ -7,9 +7,10 @@ Faculty: [Faculty Name]
 
 | Name | Roll number |
 |---|---|
-| Shreyash Singh | [Roll number] |
-| [Member 2 name] | [Roll number] |
-| [Member 3 name] | [Roll number] |
+| SHREYASH | 25WU0101130 |
+| SHIVAM | 25WU0101129 |
+| SUDESHNA | 25WU0101104 |
+|SAMBHAJI|25WU0101120|
 
 ## What is in this folder
 
